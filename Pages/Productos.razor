@@ -1,0 +1,29 @@
+﻿@page "/products"
+@using MauiStore.Models;
+@using MauiStore.Services;
+@inject IProductService Service;
+
+<h3>Productos</h3>
+
+@if (_product == null)
+{
+    <p><em>No se estrese, ta cargado...</em></p>
+}
+else
+{
+    @foreach (var res in _product.results)
+    {
+        <h1>Hola</h1>
+    }
+}
+
+@code {
+    private Product _product;
+
+    protected override  async Task OnInitializedAsync()
+    {
+        _product = await Service.Get();
+
+    }
+}
+
