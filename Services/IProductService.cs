@@ -9,6 +9,6 @@ namespace MauiStore.Services
 {
     internal interface IProductService
     {
-        public Task<Product> Get();
+        public Task<List<Product>> Get();
     }
 }

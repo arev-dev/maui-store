@@ -16,12 +16,12 @@ namespace MauiStore.Services
     {
         const string URL = "https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
 
-        public async Task<Product> Get()
+        public async Task<List<Product>> Get()
         {
             var httpClient = new HttpClient();
             var response = await httpClient.GetAsync(URL);
             var content = await response.Content.ReadAsStringAsync();
-            var producto = JsonSerializer.Deserialize<Product>(content);
+            var producto = JsonSerializer.Deserialize<List<Product>>(content);
 
             return producto;
         }

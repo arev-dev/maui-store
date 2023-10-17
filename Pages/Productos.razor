@@ -11,14 +11,14 @@
 }
 else
 {
-    @foreach (var res in _product.results)
+    @foreach (var res in _product)
     {
         <h1>Hola</h1>
     }
 }
 
 @code {
-    private Product _product;
+    private List<Product> _product;
 
     protected override  async Task OnInitializedAsync()
     {

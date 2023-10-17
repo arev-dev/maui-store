@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MauiStore.Models
 {
-    internal class Product
-    {
-        public List<Root> results { get; set; }
-    }
+    //internal class Product
+    //{
+    //    public List<Root> results { get; set; }
+    //}
     // Root myDeserializedClass = JsonConvert.DeserializeObject<List<Root>>(myJsonResponse);
     public class Category
     {
@@ -20,7 +20,7 @@ namespace MauiStore.Models
         public DateTime updatedAt { get; set; }
     }
 
-    public class Root
+    public class Product
     {
         public int id { get; set; }
         public string title { get; set; }
