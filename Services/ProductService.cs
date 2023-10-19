@@ -14,7 +14,7 @@ namespace MauiStore.Services
 {
     internal class ProductService : IProductService
     {
-        const string URL = "https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
+        const string URL = "https://api.escuelajs.co/api/v1/products";//?offset=0&limit=10
 
         public async Task<List<Product>> Get()
         {

@@ -1,4 +1,5 @@
-﻿@page "/products"
+﻿@page "/"
+@page "/products"
 @using MauiStore.Models;
 @using MauiStore.Services;
 @inject IProductService Service;
@@ -11,10 +12,24 @@
 }
 else
 {
-    @foreach (var res in _product)
-    {
-        <h1>Hola</h1>
-    }
+    <div class="container">
+        <div class="row">
+            @foreach (var res in _product)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="@res.images.FirstOrDefault()" alt="Product Image">
+                        <div class="card-body">
+                            <h2 class="card-title fs-4">@res.title</h2>
+                            <p class="card-text">Precio: $@res.price</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
 }
 
 @code {

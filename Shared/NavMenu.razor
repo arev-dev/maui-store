@@ -1,29 +1,40 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<div class="top-row ps-3 navbar navbar-dark">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="">MauiStore</a>
-		<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-			<span class="navbar-toggler-icon"></span>
+		<a class="navbar-brand" href="">Fake Store</a>
+		<button title="Menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+			<span class="fas fa-bars"></span>
 		</button>
 	</div>
 </div>
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
 	<nav class="flex-column">
-		<div class="nav-item px-3">
+		@*<div class="nav-item px-3">
 			<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
 				<span class="oi oi-home" aria-hidden="true"></span> Home
 			</NavLink>
-		</div>
-		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="counter">
-				<span class="oi oi-plus" aria-hidden="true"></span> Counter
-			</NavLink>
-		</div>
+		</div>*@
+
 		<div class="nav-item px-3">
 			<NavLink class="nav-link" href="/products">
-				<span class="oi oi-list-rich" aria-hidden="true"></span> productos
+				<span class="fas fa-store" style="margin-right:12px" aria-hidden="true"></span> Productos
 			</NavLink>
 		</div>
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/videos">
+				<span class="fas fa-video" style="margin-right:12px" aria-hidden="true"></span> Videos
+			</NavLink>
+		</div>
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/audios">
+				<span class="fas fa-music" style="margin-right:12px" aria-hidden="true"></span> Audios
+			</NavLink>
+		</div>
+
+		
 	</nav>
 </div>
 
